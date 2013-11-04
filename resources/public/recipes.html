@@ -1,0 +1,41 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Recipies Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+  </head>
+  <body ng-app="recipesDemo" 
+        ng-controller="RecipesMainCtrl"
+        class="container">    
+    <div class="span8 offset2" 
+         style="border:1px dotted yellow; padding-top: 100px">
+      <div class="centered">
+        <h1>Recipes</h1>
+        <form>
+          <input ng-model="recipe"></input>
+          <button type="submit" ng-click="searchRecipes()">search</button>
+          <ul>
+            <li ng-repeat="h in data.results">
+              <h4 ng-bind="h.title"></h4>
+              <img ng-src="{{h.thumbnail}}"></img>
+            </li>
+          </ul>
+      </form>
+      </div>
+    </div>
+    <script src="js/angular.js"></script>
+    <script src="js/mustache.js"></script>
+    <script src="js/angular-example.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>
