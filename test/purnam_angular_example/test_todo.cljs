@@ -8,3 +8,20 @@
                                it-uses it-compiles]]))
 
 (init)
+
+(describe.ng
+  {:doc  "Testing Storage"
+   :module todoDemo
+   :inject [todoStorage]}
+
+  (it "Default Values"
+      (is (todoStorage.get) 
+          (arr {:text "Learn Clojure" :done false}
+               {:text "Learn Javascript" :done false}
+               {:text "Learn Angular" :done false})))
+
+   (it "Putting"
+       (todoStorage.put (arr {:text "Do Chores" :done false}))
+       (is (todoStorage.get)
+           (arr {:text "Do Chores" :done false})
+            )))
