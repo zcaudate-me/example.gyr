@@ -15,14 +15,15 @@
   </head>
   <body ng-app="recipesDemo" 
         ng-controller="RecipesMainCtrl"
-        class="container">    
+        class="container"
+        ng-init="data=searchRecipes(url)">    
     <div class="span8 offset2" 
          style="border:1px dotted yellow; padding-top: 100px">
       <div class="centered">
         <h1>Recipes</h1>
         <form>
           <input ng-model="recipe"></input>
-          <button type="submit" ng-click="searchRecipes()">search</button>
+          <button type="submit" ng-click="searchRecipes(url)">search</button>
           <ul>
             <li ng-repeat="h in data.results">
               <h4 ng-bind="h.title"></h4>

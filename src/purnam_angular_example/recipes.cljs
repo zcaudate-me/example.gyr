@@ -16,15 +16,15 @@
 (def.controller recipesDemo.RecipesMainCtrl [$scope $http]
   (! $scope.recipe "chocolate")
   
+  (! $scope.url "http://www.recipepuppy.com/api")
+
   (! $scope.searchRecipes
-    (fn []
+    (fn [url]
       (->
        ($http (obj :method "JSONP"
                    :params {:q $scope.recipe
                             :callback "jsonsearch"}
-                   :url "http://www.recipepuppy.com/api"))
+                   :url url))
        (.success (fn [res]))
        (.error (fn []
-         (! $scope.data JSONP.data))))))
-  (if-not $scope.data
-    ($scope.searchRecipes)))
+         (! $scope.data JSONP.data)))))))
