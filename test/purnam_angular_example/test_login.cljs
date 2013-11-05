@@ -23,6 +23,14 @@
   (it "Contains user: dylan, pass: bob"    
       (is (get-in @Db [:users "dylan"]) "bob")))
 
+
+(describe.ng
+  {:doc  "Testing Alternate Db"
+   :module loginDemo}
+
+  (it-uses [Db] "Injecting Db"
+      (is Db #(instance? Atom %))))
+
 (describe.ng
  {:doc  "Testing Heading-One Directive"
   :module loginDemo}

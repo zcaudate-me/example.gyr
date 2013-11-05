@@ -13,7 +13,7 @@ Clone this project and compile using cljsbuild:
 #### Examples
 Run a server in the `resources/public`
 
-   > python -m SimpleHTTPServer 8000 
+    > python -m SimpleHTTPServer 8000 
 
 And then browse to: `http://localhost:8000/`
 
