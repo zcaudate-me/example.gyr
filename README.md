@@ -1,14 +1,36 @@
 # purnam-angular-example
 
-A Clojure library designed to ... well, that part is up to you.
+Example of how to write and test angular.js code using clojurescript code using [purnam](http://www.github.com/zcaudate/purnam).
 
 ## Usage
 
-FIXME
+Clone this project and compile using cljsbuild:
+
+    > git clone https://github.com/zcaudate/purnam-angular-example.git
+    > cd purnam-angular-example
+    > lein cljsbuild auto
+
+#### Examples
+Run a server in the `resources/public`
+
+   > python -m SimpleHTTPServer 8000 
+
+And then browse to: `http://localhost:8000/`
+
+#### Tests    
+In a new window in the same directory:
+
+    > karma start
+
+Tests are defined in `test/purnam_angular_example`.
+
+## Tutorial
+
+Coming Soon....
 
 ## License
 
-Copyright © 2013 FIXME
+Copyright © 2013 Chris Zheng
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

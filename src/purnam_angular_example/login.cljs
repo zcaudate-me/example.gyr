@@ -21,7 +21,7 @@
                    "dylan" "bob"
                    "white" "snow"
                    "winfrey" "oprah"}}))
-
+                   
 (def.service loginDemo.App []
   (obj
    :statusMsg {:loggedOut "Please Log In"

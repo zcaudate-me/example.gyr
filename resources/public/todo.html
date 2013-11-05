@@ -26,7 +26,7 @@
          style="border:1px dotted yellow; padding-top: 100px">
       <div class="centered">
         <h1>Todo List</h1>
-        <span>{{remainingTodos()}} of {{todos.length}} remaining</span>
+        <span>{{remainingTodos()}} of {{todos | myCount}} remaining</span>
         <ul class="unstyled">
           <li ng-repeat="t in todos">
             <input type="checkbox" ng-model=t.done>

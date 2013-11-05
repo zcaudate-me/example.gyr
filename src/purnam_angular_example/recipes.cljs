@@ -9,6 +9,7 @@
 
 (! js/window.jsonsearch
    (fn [data]
+     (js/console.log "Failed")
      (! JSONP.data data)))
 
 (def.module recipesDemo [])
@@ -17,6 +18,13 @@
   (! $scope.recipe "chocolate")
   
   (! $scope.url "http://www.recipepuppy.com/api")
+
+  (! $scope.searchExamples
+    (fn [url]
+      (->
+       ($http.post url)
+       (.success (fn [res]
+                    (! $scope.data res))))))
 
   (! $scope.searchRecipes
     (fn [url]
@@ -27,4 +35,5 @@
                    :url url))
        (.success (fn [res]))
        (.error (fn []
+         (js/console.log "Failed")
          (! $scope.data JSONP.data)))))))

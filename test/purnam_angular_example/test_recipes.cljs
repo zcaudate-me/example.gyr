@@ -1,5 +1,5 @@
-(ns purnam-angular-examples.test-login
-  (:require [purnam-angular-examples.login :as app])
+(ns purnam-angular-examples.test-recipes
+  (:require [purnam-angular-examples.recipes :as app])
   (:use [purnam.cljs :only [aset-in aget-in]])
   (:use-macros
    [purnam.js :only [obj arr !]]
@@ -7,23 +7,30 @@
    [purnam.test.angular :only [describe.ng describe.controller 
                                it-uses it-compiles]]))
 
+(init)
+
 (describe.controller
  {:doc "Testing"
-  :module recipiesDemo
+  :module recipesDemo
   :controller RecipesMainCtrl
   :inject [[$httpBackend
             ([$httpBackend]
                (do (-> $httpBackend
                        (.when "POST" "/examples")
-                       (.respond 200 (js/JSON.stringify 
-                                       (arr {:title "Chocolate Cake"}
-                                            {:title "Citrus Pudding"}
-                                            {:title "Lemon Tart"}))))
+                       (.respond 200 
+                            (js/JSON.stringify 
+                              (arr {:title "Chocolate Cake"}
+                                   {:title "Citrus Pudding"}
+                                   {:title "Lemon Tart"}))))
                    $httpBackend))]]
   :vars [o (range 20)]}
 
+  (it "should have a recipe search for choclate"
+    (is $scope.recipe "chocolate"))
+
   (it "should filled up $scope.data"
-    ($scope.searchRecipes $scope.url)
+    ($scope.searchExamples "/examples")
+    ($httpBackend.flush)
     (is $scope.data (arr {:title "Chocolate Cake"}
                          {:title "Citrus Pudding"}
                          {:title "Lemon Tart"})))

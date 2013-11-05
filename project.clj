@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/clojurescript "0.0-1978"]
-                 [im.chit/purnam "0.1.7"]]
+                 [im.chit/purnam "0.1.8"]]
   :cljsbuild
   {:builds  [{:source-paths ["src" "test"],
               :id "unit-test",
