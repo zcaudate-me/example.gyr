@@ -17,6 +17,9 @@ Run a server in the `resources/public`
 
 And then browse to: `http://localhost:8000/`
 
+The examples can be seen here:
+http://docs.caudate.me/purnam-angular-example/
+
 #### Tests    
 In a new window in the same directory:
 
