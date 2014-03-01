@@ -21,8 +21,7 @@ Run a server in the `publish` directory
 
 And then browse to: `http://localhost:8000/`
 
-The examples can be seen here:
-http://http://purnam.github.io/example.gyr/
+The examples can be seen online [here](http://purnam.github.io/example.gyr)
 
 #### Tests    
 In a new window in the same directory:
