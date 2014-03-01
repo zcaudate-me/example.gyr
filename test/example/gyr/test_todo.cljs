@@ -1,13 +1,11 @@
-(ns purnam-angular-examples.test-todo
-  (:require [purnam-angular-examples.todo :as app])
-  (:use [purnam.cljs :only [aset-in aget-in]])
+(ns example.gyr.test-todo
+  (:require [example.gyr.todo :as app]
+            [purnam.test])
   (:use-macros
-   [purnam.js :only [obj arr !]]
-   [purnam.test :only [init describe it is]]
-   [purnam.test.angular :only [describe.ng describe.controller 
-                               it-uses it-compiles it-uses-filter]]))
-
-(init)
+   [purnam.core :only [obj arr !]]
+   [purnam.test :only [describe it is]]
+   [gyr.test    :only [describe.ng describe.controller 
+                       it-uses it-compiles it-uses-filter]]))
 
 (describe.ng
   {:doc  "Testing Storage"

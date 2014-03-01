@@ -1,9 +1,8 @@
-(ns purnam-angular-examples.login
-  (:use [purnam.cljs :only [aset-in aget-in]])
+(ns example.gyr.login
   (:use-macros
-   [purnam.js :only [! def.n obj]]
-   [purnam.angular :only [def.module def.config def.value def.directive
-                           def.controller def.service]]))
+   [purnam.core :only [! def.n obj]]
+   [gyr.core    :only [def.module def.config def.value def.directive
+                       def.controller def.service]]))
 
 (def.module loginDemo [])
 

@@ -1,9 +1,8 @@
-(ns purnam-angular-examples.recipes
-  (:use [purnam.cljs :only [aget-in aset-in]])
+(ns example.gyr.recipes
   (:require [goog.object :as o])
-  (:use-macros [purnam.js :only [obj arr ! def.n]]
-               [purnam.angular :only [def.module def.config def.factory
-                                      def.controller def.service]]))
+  (:use-macros [purnam.core :only [obj arr ! def.n]]
+               [gyr.core :only [def.module def.config def.factory
+                                def.controller def.service]]))
 
 (def JSONP (obj))
 

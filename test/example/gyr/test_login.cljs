@@ -1,13 +1,11 @@
-(ns purnam-angular-examples.test-login
-  (:require [purnam-angular-examples.login :as app])
-  (:use [purnam.cljs :only [aset-in aget-in]])
+(ns example.gyr.test-login
+  (:require [example.gyr.login :as app]
+            [purnam.test])
   (:use-macros
-   [purnam.js :only [obj arr !]]
-   [purnam.test :only [init describe it is]]
-   [purnam.test.angular :only [describe.ng describe.controller 
-                               it-uses it-compiles]]))
-
-(init)
+   [purnam.core :only [obj arr !]]
+   [purnam.test :only [describe it is]]
+   [gyr.test    :only [describe.ng describe.controller 
+                       it-uses it-compiles]]))
 
 (describe.ng
   {:doc  "Testing Db"

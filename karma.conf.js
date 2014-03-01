@@ -14,10 +14,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-    'resources/public/js/angular.js',
-    'resources/public/js/angular-mocks.js',
-    'resources/public/js/mustache.js',
-    'resources/public/js/test-angular-example.js'
+    'publish/js/angular.js',
+    'publish/js/angular-mocks.js',
+    'publish/js/mustache.js',
+    'publish/js/test-angular-example.js'
     ],
 
 

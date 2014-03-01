@@ -1,0 +1,4 @@
+[submodule "publish"]
+	path = publish
+	url = https://github.com/purnam/example.gyr.git
+	branch = gh-pages

@@ -1,9 +1,8 @@
-(ns purnam-angular-examples.todo
-  (:use [purnam.cljs :only [aget-in aset-in]])
+(ns example.gyr.todo
   (:require [goog.object :as o])
-  (:use-macros [purnam.js :only [obj arr ! def.n]]
-               [purnam.angular :only [def.module def.filter
-                                      def.factory def.controller]]))
+  (:use-macros [purnam.core :only [obj arr ! def.n]]
+               [gyr.core :only [def.module def.filter
+                                def.factory def.controller]]))
 
 (def.module todoDemo [])
 
