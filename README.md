@@ -1,39 +1,38 @@
-# purnam-angular-example
+# example.gyr
 
-Example of how to write and test angular.js code using clojurescript code using [purnam](http://www.github.com/zcaudate/purnam).
+Example of how to write and test angular.js code using clojurescript code using [gyr](http://www.github.com/purnam/gyr).
+
+[![Build Status](https://travis-ci.org/purnam/example.gyr.png?branch=master)](https://travis-ci.org/purnam/example.gyr)
 
 ## Usage
 
 Clone this project and compile using cljsbuild:
 
-    > git clone https://github.com/zcaudate/purnam-angular-example.git
-    > cd purnam-angular-example
+    > git clone https://github.com/purnam/example.gyr.git
+    > cd example.gyr
+    > git submodule init
+    > git submodule update
     > lein cljsbuild auto
 
 #### Examples
-Run a server in the `resources/public`
+Run a server in the `publish` directory
 
     > python -m SimpleHTTPServer 8000 
 
 And then browse to: `http://localhost:8000/`
 
 The examples can be seen here:
-http://docs.caudate.me/purnam-angular-example/
+http://http://purnam.github.io/example.gyr/
 
 #### Tests    
 In a new window in the same directory:
 
     > karma start
 
-Tests are defined in `test/purnam_angular_example`.
-
-## Tutorial
-
-Coming Soon....
+Tests are defined in `test/example/gyr` directory.
 
 ## License
 
-Copyright © 2013 Chris Zheng
+Copyright © 2014 Chris Zheng
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the The MIT License.
